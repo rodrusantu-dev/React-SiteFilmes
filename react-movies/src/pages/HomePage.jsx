@@ -6,11 +6,13 @@ export default function HomePage(){
     return(
         <div>
                 <div>
-                    <Header props="Este é o HEADER"/>
+                    <Header props="HOME"/>
                 </div>
+                
                 <div>
                     <Main props="Banner de Filmes"/>
                 </div>
+                
                 <div>
                     <Footer props="React Movies @ 2022."/>
                 </div>
