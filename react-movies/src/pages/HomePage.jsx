@@ -7,15 +7,14 @@ export default function HomePage(){
         <div>
                 <div>
                     <Header props="HOME"/>
-                </div>
-                
+                </div>    
                 <div>
                     <Main props="Banner de Filmes"/>
-                </div>
-                
+                </div>     
                 <div>
                     <Footer props="React Movies @ 2022."/>
                 </div>
         </div>
     )
 }
+
