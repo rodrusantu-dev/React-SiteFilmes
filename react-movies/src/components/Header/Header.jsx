@@ -1,8 +1,12 @@
-export function Header({titleHome}){
+import  { PropsHome } from "../../layouts/Header"
+
+export function Header(props){
     return(
+        <PropsHome>
         <div>
-           <h1>{titleHome="HOME PRINCIPAL"}</h1> 
+           <h1>{props.Home}</h1> 
         </div>
+        </PropsHome>
     )
 
 }

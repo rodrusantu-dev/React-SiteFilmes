@@ -1,26 +1,38 @@
-import { Header } from '../../components/Header/Header'
-import { Main } from '../../components/Main/Main'
-import { Footer } from '../../components/Footer/Footer'
-import { useState, useEffect } from 'react'
-import { getList } from '../../api/themovie'
-import { MoviesList } from '../../components/MoviesComp/MoviesList'
+import { useEffect, useState } from "react"
+import { Header } from "../../components/Header/Header"
+import { Favoritos } from "../../components/Main/Main"
+import { Card } from "../../components/Card/Card"
+import { Logo } from "../../layouts/Header"
+import { Main, Grid } from "../../layouts/Main"
+import { getList } from "../../api/themovie"
 
-export default function HomePage(){
-    const [movies, setMovies] = useState([])
 
-    useEffect (() => {
-        getList(setMovies)
-    },[])
+export default function Home(){
 
+const [movies, setMovies] = useState([])
+useEffect (() => {
+    getList(setMovies)
+},[])
+ 
     return(
-        <>
-            <Header titleHome/>
-            <Main popularMovies/>
-            <MoviesList movies={movies}/>
-            <Footer copyright/>
-        </>
+        <div>
+
+            <div>
+                <Header Home="Home"/>
+                <Logo/> 
+            </div> 
+
+            <Main>
+                <Favoritos Filmes="Filmes Populares"/>
+                <Grid>
+                    {movies.map((movie) => {
+                        return (
+                            <Card movie={movie}/>
+                        )
+                    })} 
+                </Grid>
+            </Main>
+        </div>  
     )
 }
-
-
 

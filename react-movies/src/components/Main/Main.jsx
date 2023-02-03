@@ -1,8 +1,14 @@
-export function Main({popularMovies}){
+import { FavoritosStyle } from "../../layouts/Main"
+
+
+export function Favoritos(props){
     return(
-        <div>
-           <h1>{popularMovies="FILMES POPULARES - FAVORITOS:"}</h1> 
-        </div>
+        <FavoritosStyle>
+           <h1>{props.Filmes}</h1> 
+        </FavoritosStyle>
     )
 
 }
+
+
+
