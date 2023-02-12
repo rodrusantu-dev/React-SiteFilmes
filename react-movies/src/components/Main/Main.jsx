@@ -1,4 +1,4 @@
-import { FavoritosStyle } from "../../layouts/Main"
+import { FavoritosStyle } from "../Main/MainStyle"
 
 
 export function Favoritos(props){

@@ -1,12 +1,21 @@
-import  { PropsHome } from "../../layouts/Header"
+import  { Home } from "../Header/HeaderStyle"
+import { HomeDetail } from "../Header/HeaderStyle"
 
 export function Header(props){
     return(
-        <PropsHome>
+        <Home>
         <div>
            <h1>{props.Home}</h1> 
         </div>
-        </PropsHome>
+        </Home>
     )
 
+}
+
+export const HeaderDetail= (title) => {
+return (
+        <HomeDetail>
+             <p>{title}</p>
+        </HomeDetail> 
+)
 }

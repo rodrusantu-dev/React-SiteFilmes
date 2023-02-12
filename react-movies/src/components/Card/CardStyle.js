@@ -1,14 +1,17 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 
-export const MainContainer = styled.div`
+export const MainContainer = styled(Link)` 
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 height: 100%;
 width: 100%;
-border: 1px solid #000;
+border: 2px solid #808080;
+text-decoration: none; 
+color: #000;
 border-radius: 5px;
 :hover {
     cursor: pointer;
@@ -29,4 +32,5 @@ img{
     width: 100%;
     height: 100%;
 }
-`
+
+` 

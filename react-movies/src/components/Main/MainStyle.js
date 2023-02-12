@@ -24,8 +24,8 @@ justify-content: center;
 align-items: center;
 width: 80%;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-color: #000;
-padding: 10vh 0;
+color: #000000;
 gap: 3vh; 
 margin: auto;
+
 `

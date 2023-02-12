@@ -16,10 +16,11 @@ const page = "1"
         })
     }
 
-    export const getDetail = (id) => {
+    export const getDetail = async(id, setState) => {
         axios.get(`${API_URL}${id}?api_key=${API_KEY}&language=${LANGUAGE}`)
         .then ((response) => {
             console.log(response)
+            setState(response.data) 
         })
         .catch ((error) => {
             console.log(error)
